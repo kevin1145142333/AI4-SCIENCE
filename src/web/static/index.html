@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI4 Science · 科研创新工作台</title>
+  <meta name="description" content="AI4 Science 多智能体科研创新辅助系统">
+  <link rel="stylesheet" href="/css/base.css?v=20261016b">
+  <link rel="stylesheet" href="/css/components.css?v=20261016b">
+  <link rel="stylesheet" href="/css/effects.css?v=20261016b">
+  <link rel="stylesheet" href="/css/views.css?v=20261016b">
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-core" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">AI4 <span>SCIENCE</span></div>
+        <div class="brand-sub">科研创新 · 多智能体工作台</div>
+      </div>
+    </div>
+
+    <nav class="topnav" aria-label="主导航">
+      <button class="nav-btn" data-route="cockpit" data-key="1"><span class="nav-k">1</span>指挥舱</button>
+      <button class="nav-btn" data-route="tasks" data-key="2"><span class="nav-k">2</span>任务中心</button>
+      <button class="nav-btn" data-route="workbench" data-key="3"><span class="nav-k">3</span>结果工作台</button>
+      <button class="nav-btn" data-route="system" data-key="4"><span class="nav-k">4</span>系统监控</button>
+      <button class="nav-btn" data-route="guide" data-key="5"><span class="nav-k">5</span>指南</button>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="btn-demo" title="加载演示数据（离线可预览完整效果）">
+        <span class="icon">◈</span><span>演示</span>
+      </button>
+      <button class="icon-btn" id="btn-sound" title="音效（默认关闭）" aria-pressed="false">
+        <span class="icon">♪</span><span>音效</span>
+      </button>
+      <button class="icon-btn" id="btn-perf" title="性能模式（关闭粒子与扫光，低配设备更流畅）" aria-pressed="false">
+        <span class="icon">⚡</span><span>性能</span>
+      </button>
+      <button class="icon-btn cmd-trigger" title="命令面板" aria-label="打开命令面板">
+        <span class="icon">⌘</span><span>K</span>
+      </button>
+    </div>
+  </header>
+
+  <div id="offline-banner" class="offline-banner" hidden>
+    <span class="dot"></span> 与服务断开连接，正在重试…
+  </div>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <footer class="app-footer">
+    <span>AI4 Science v<span id="footer-version">1.0.0</span></span>
+    <span class="muted">· Apache 2.0 · 数据与任务仅存于本机内存与浏览器</span>
+  </footer>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <div id="command-palette" class="command-palette" hidden>
+    <div class="cmd-panel">
+      <div class="cmd-search">
+        <span class="cmd-prompt">›</span>
+        <input id="cmd-input" type="text" placeholder="输入命令或搜索…（Esc 关闭）" autocomplete="off">
+      </div>
+      <ul id="cmd-results" class="cmd-results"></ul>
+      <div class="cmd-hint">↑↓ 选择 · Enter 执行 · Esc 关闭</div>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+
+  <script type="module" src="/js/main.js?v=20261016b"></script>
+</body>
+</html>

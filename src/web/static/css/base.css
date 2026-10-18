@@ -1,0 +1,180 @@
+/* ============================================================
+   AI4 Science · base.css — 设计令牌 / 重置 / 布局骨架
+   ============================================================ */
+
+:root {
+  --bg-0: #04070f;
+  --bg-1: #070c1a;
+  --bg-2: #0a1020;
+  --panel: rgba(10, 16, 32, 0.78);
+  --panel-solid: #0a1020;
+  --line: rgba(92, 140, 205, 0.22);
+  --line-strong: rgba(53, 230, 255, 0.45);
+
+  --cyan: #35e6ff;
+  --cyan-soft: rgba(53, 230, 255, 0.16);
+  --violet: #a06bff;
+  --violet-soft: rgba(160, 107, 255, 0.16);
+  --magenta: #ff5a8a;
+  --magenta-soft: rgba(255, 90, 138, 0.16);
+  --green: #38f0a0;
+  --green-soft: rgba(56, 240, 160, 0.16);
+  --amber: #ffc857;
+  --amber-soft: rgba(255, 200, 87, 0.16);
+  --red: #ff5d6c;
+  --red-soft: rgba(255, 93, 108, 0.16);
+
+  --text: #dceaff;
+  --text-dim: #8fa6c8;
+  --text-faint: #5c6f91;
+
+  --font-ui: "Segoe UI", "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+
+  --radius: 10px;
+  --clip-hud: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
+  --shadow-glow-cyan: 0 0 0 1px var(--line-strong), 0 0 18px rgba(53, 230, 255, 0.22);
+
+  --speed: 160ms;
+}
+
+* { box-sizing: border-box; }
+
+/* 语义化的 hidden 必须真正生效：
+   .command-palette / .offline-banner 等元素自带 display 声明，
+   会覆盖浏览器默认的 [hidden] { display: none }，导致 Esc 关闭无效。 */
+[hidden] { display: none !important; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 78% -10%, rgba(160, 107, 255, 0.12), transparent 60%),
+    radial-gradient(1000px 640px at 12% 110%, rgba(53, 230, 255, 0.10), transparent 55%),
+    var(--bg-0);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: 14px;
+  line-height: 1.55;
+  overflow-x: hidden;
+}
+
+body.perf-mode .grid-bg,
+body.perf-mode #starfield,
+body.perf-mode .scanlines { display: none; }
+
+a { color: var(--cyan); text-decoration: none; }
+a:hover { text-shadow: 0 0 12px var(--cyan-soft); }
+
+button { font-family: inherit; color: inherit; }
+
+::selection { background: rgba(53, 230, 255, 0.28); }
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: rgba(4, 7, 15, 0.6); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--cyan), var(--violet));
+  border-radius: 10px;
+  border: 2px solid var(--bg-0);
+}
+
+/* 顶层骨架 */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 22px;
+  background: linear-gradient(180deg, rgba(4, 7, 15, 0.96), rgba(4, 7, 15, 0.78));
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(12px);
+}
+
+.brand { display: flex; align-items: center; gap: 12px; min-width: 240px; }
+
+.brand-core {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  position: relative;
+  background:
+    radial-gradient(circle at 50% 50%, var(--cyan) 0 7%, transparent 8%),
+    conic-gradient(from 0deg, var(--cyan), var(--violet), var(--magenta), var(--cyan));
+  box-shadow: 0 0 18px rgba(53, 230, 255, 0.55);
+  animation: core-spin 8s linear infinite;
+}
+.brand-core::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(220, 234, 255, 0.8);
+  background: radial-gradient(circle, #04070f 55%, transparent 56%);
+}
+
+.brand-name {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.brand-name span { color: var(--cyan); text-shadow: 0 0 12px rgba(53, 230, 255, 0.55); }
+.brand-sub { font-size: 11px; color: var(--text-faint); letter-spacing: 2px; }
+
+.topnav {
+  display: flex;
+  gap: 6px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.view {
+  width: min(1560px, 96vw);
+  margin: 26px auto 40px;
+  min-height: calc(100vh - 180px);
+  animation: view-in 220ms ease;
+}
+
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 24px;
+  color: var(--text-faint);
+  font-size: 12px;
+  border-top: 1px solid var(--line);
+  font-family: var(--font-mono);
+}
+
+.muted { color: var(--text-dim); }
+.mono { font-family: var(--font-mono); }
+.dim { color: var(--text-dim); }
+.faint { color: var(--text-faint); }
+.accent { color: var(--cyan); }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+@media (max-width: 1100px) {
+  .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+  .app-header { flex-wrap: wrap; }
+  .brand { min-width: auto; }
+  .topnav { order: 3; width: 100%; justify-content: center; }
+}
+
+@media (max-width: 720px) {
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .view { width: 100vw; padding: 0 12px; }
+}
+
+@keyframes core-spin { to { transform: rotate(360deg); } }
+@keyframes view-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}

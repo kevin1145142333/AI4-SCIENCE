@@ -1,0 +1,46 @@
+# AI4 Science 配置文件
+
+# 项目基本信息
+project:
+  name: "AI4 Science"
+  version: "1.0.0"
+  environment: "development"
+
+# 数据源配置
+data_sources:
+  arxiv:
+    enabled: true
+    max_results: 100
+  semantic_scholar:
+    enabled: true
+    api_key: ""  # 可选，有API Key可提高限额
+  pubmed:
+    enabled: true
+    email: ""  # 建议填写，用于PubMed API
+  ieee:
+    enabled: false
+    api_key: ""  # 需要IEEE Xplore API Key
+
+# 智能体配置
+agents:
+  coordinator:
+    max_retries: 3
+    timeout: 300
+  search:
+    concurrent_requests: 5
+    cache_enabled: true
+  analysis:
+    quality_threshold: 40
+    min_citations: 0
+
+# 硬件配置
+hardware:
+  device: "auto"  # auto/cpu/cuda
+  max_memory_gb: 12
+  enable_gpu: true
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "detailed"
+  rotation: "100 MB"

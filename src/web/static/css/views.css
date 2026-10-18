@@ -1,0 +1,165 @@
+/* ============================================================
+   AI4 Science · views.css — 各视图专属布局
+   ============================================================ */
+
+/* ---------- 指挥舱 ---------- */
+.cockpit-hero {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 18px;
+}
+.cockpit-query .textarea { min-height: 150px; font-size: 15px; }
+.cockpit-config { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 16px; }
+.cockpit-actions { display: flex; gap: 12px; align-items: center; margin-top: 6px; }
+
+.examples { margin-top: 12px; }
+.examples .chip { font-family: var(--font-mono); font-size: 11.5px; }
+
+.core-ring {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 220px;
+  height: 220px;
+  margin: 8px auto;
+  border-radius: 50%;
+  border: 1px dashed var(--line-strong);
+  box-shadow: 0 0 34px rgba(53, 230, 255, 0.12) inset;
+}
+.core-ring::before, .core-ring::after {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+}
+.core-ring::after { inset: 34px; border-style: dashed; animation: core-spin 18s linear infinite; }
+.core-ring .status-txt { text-align: center; font-family: var(--font-mono); }
+.core-ring .status-txt b { display: block; font-size: 20px; color: var(--cyan); text-shadow: 0 0 14px rgba(53,230,255,0.6); }
+.core-ring .status-txt span { font-size: 11px; color: var(--text-faint); letter-spacing: 2px; }
+
+/* ---------- 任务中心 ---------- */
+.task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+.task-card { display: flex; flex-direction: column; gap: 12px; }
+.task-card .t-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.task-card .t-query { font-size: 14px; line-height: 1.5; min-height: 42px; }
+.task-card .t-meta { display: flex; flex-wrap: wrap; gap: 6px; }
+.task-card .t-actions { display: flex; gap: 8px; margin-top: auto; }
+.task-card .t-actions .btn { flex: 1; }
+
+/* ---------- 工作台 ---------- */
+.wb-toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+.wb-toolbar .grow { flex: 1; }
+
+.section { margin-top: 22px; }
+.section > .panel { margin-bottom: 0; }
+
+.chart-box { position: relative; min-height: 220px; display: grid; place-items: center; }
+.chart-box svg { max-width: 100%; height: auto; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px; font-size: 12px; color: var(--text-dim); }
+.chart-legend .sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; }
+
+.graph-wrap { position: relative; width: 100%; height: 460px; overflow: hidden; border-radius: 8px; background: radial-gradient(circle at 50% 50%, rgba(10, 18, 38, 0.9), rgba(4, 7, 15, 0.95)); }
+.graph-wrap canvas { display: block; cursor: grab; }
+.graph-wrap canvas.dragging { cursor: grabbing; }
+.graph-hud { position: absolute; top: 10px; left: 10px; display: flex; gap: 6px; flex-wrap: wrap; max-width: 70%; }
+.graph-legend { position: absolute; bottom: 10px; left: 10px; display: flex; gap: 12px; font-size: 11px; color: var(--text-dim); }
+.graph-tip { position: absolute; bottom: 10px; right: 10px; font-size: 11px; color: var(--text-faint); }
+
+.node-pop {
+  position: absolute;
+  min-width: 200px;
+  max-width: 320px;
+  padding: 12px;
+  background: rgba(7, 12, 26, 0.96);
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  font-size: 12.5px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* TRL 仪表 */
+.trl-stage { display: flex; align-items: center; gap: 8px; }
+.trl-stage .bar {
+  width: 10px;
+  height: 22px;
+  border-radius: 2px;
+  background: rgba(92, 140, 205, 0.16);
+}
+.trl-stage.lit .bar { background: linear-gradient(180deg, var(--cyan), var(--violet)); box-shadow: 0 0 10px rgba(53,230,255,0.5); }
+.trl-stage .n { font-family: var(--font-mono); font-size: 11px; color: var(--text-faint); width: 14px; }
+
+/* 卡片列表 */
+.card-list { display: grid; gap: 14px; }
+.hyp-card { border-left: 2px solid var(--violet); padding-left: 14px; }
+.hyp-card .h-title { font-size: 15px; color: #eaffff; margin-bottom: 6px; }
+.feas-tri { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 10px; }
+.feas-tri .f { padding: 8px; border: 1px solid var(--line); border-radius: 6px; text-align: center; font-size: 11px; color: var(--text-dim); }
+.feas-tri .f b { display: block; font-family: var(--font-mono); color: var(--text); }
+
+.cf-table td, .cf-table th { font-size: 12.5px; }
+
+/* 报告 */
+.report-slot { min-height: 64px; }
+.report-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+.report-actions .grow { flex: 1; }
+.report-body {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 18px 26px;
+  background: rgba(7, 12, 26, 0.7);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+}
+/* 内嵌在结果页时限制高度，保证下面的图谱/图表也能滚动到 */
+.report-body.inline { max-height: 74vh; overflow: auto; }
+.report-body h1, .report-body h2, .report-body h3 { color: #eaffff; }
+.report-body h1 { font-size: 22px; border-bottom: 1px solid var(--line-strong); padding-bottom: 10px; }
+.report-body h2 { font-size: 17px; margin-top: 26px; color: var(--cyan); }
+.report-body h3 { font-size: 15px; }
+.report-body table { width: 100%; border-collapse: collapse; margin: 14px 0; }
+.report-body th, .report-body td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; font-size: 12.5px; }
+.report-body th { background: rgba(53,230,255,0.08); color: var(--cyan); }
+.report-body code { background: rgba(53,230,255,0.10); padding: 2px 5px; border-radius: 4px; font-family: var(--font-mono); }
+.report-body pre { background: rgba(4,7,15,0.8); padding: 14px; border-radius: 8px; overflow: auto; }
+.report-body blockquote { border-left: 2px solid var(--violet); margin: 12px 0; padding-left: 12px; color: var(--text-dim); }
+
+/* ---------- 系统监控 ---------- */
+.sys-spark { height: 90px; }
+.sys-log {
+  height: 360px;
+  overflow: auto;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  background: rgba(4, 7, 15, 0.8);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px;
+  white-space: pre-wrap;
+}
+
+/* ---------- 指南 ---------- */
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.guide h2 { margin-top: 28px; color: var(--cyan); font-size: 17px; }
+.guide h3 { font-size: 14px; color: #eaffff; }
+.guide table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+.guide th, .guide td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; font-size: 12.5px; }
+.guide th { color: var(--cyan); background: rgba(53,230,255,0.08); }
+.guide code { font-family: var(--font-mono); background: rgba(53,230,255,0.10); padding: 2px 5px; border-radius: 4px; }
+.kbd {
+  display: inline-block;
+  padding: 2px 7px;
+  border: 1px solid var(--line);
+  border-bottom-width: 2px;
+  border-radius: 5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .cockpit-hero { grid-template-columns: 1fr; }
+  .cockpit-config { grid-template-columns: 1fr; }
+}
