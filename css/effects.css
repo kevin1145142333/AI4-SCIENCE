@@ -1,0 +1,76 @@
+/* ============================================================
+   AI4 Science · effects.css — 星空 / 网格 / 扫描线 / 发光
+   ============================================================ */
+
+#starfield {
+  position: fixed;
+  inset: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(53, 230, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(53, 230, 255, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 3px,
+    rgba(0, 0, 0, 0.10) 4px
+  );
+  mix-blend-mode: multiply;
+  opacity: 0.55;
+}
+
+.glow-cyan { text-shadow: 0 0 12px rgba(53, 230, 255, 0.65); }
+.glow-violet { text-shadow: 0 0 12px rgba(160, 107, 255, 0.65); }
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--cyan);
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.page-head { margin: 4px 0 20px; }
+.page-head h1 {
+  margin: 6px 0 4px;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.page-head .lead { color: var(--text-dim); max-width: 760px; }
+
+.scan-sweep {
+  position: relative;
+  overflow: hidden;
+}
+.scan-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; top: -40%;
+  height: 30%;
+  background: linear-gradient(180deg, transparent, rgba(53, 230, 255, 0.08), transparent);
+  animation: sweep 4.5s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes sweep { to { top: 130%; } }

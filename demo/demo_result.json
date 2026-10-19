@@ -1,0 +1,222 @@
+{
+  "query": "探索钙钛矿太阳能电池的长期稳定性提升策略",
+  "parsed_query": {
+    "keywords": ["perovskite", "stability", "solar cell", "passivation"],
+    "domains": ["材料科学", "能源"],
+    "time_range": null,
+    "research_type": "exploratory"
+  },
+  "literature": {
+    "total_papers": 12,
+    "sources": { "arxiv": 6, "pubmed": 4, "semantic_scholar": 2 },
+    "papers": [
+      { "paperId": "p1", "title": "Ion migration and its impact on perovskite solar cell stability", "authors": ["Y. Li", "H. Wang", "J. Chen"], "year": 2023, "source": "arxiv", "url": "https://arxiv.org/abs/2301.00001", "abstract": "综述了钙钛矿中离子迁移的机理，并分析了其对器件长期稳定性的影响，提出了抑制离子迁移的界面工程策略。", "citationCount": 132, "quality_score": 88, "categories": ["physics.app-ph"] },
+      { "paperId": "p2", "title": "Interface passivation for stable and efficient perovskite photovoltaics", "authors": ["M. Kim", "S. Park", "A. Nguyen"], "year": 2022, "source": "arxiv", "url": "https://arxiv.org/abs/2202.00002", "abstract": "系统比较了多种表面钝化分子，发现基于烷基铵盐的界面钝化可将效率与稳定性同时提升。", "citationCount": 210, "quality_score": 93, "categories": ["cond-mat.mtrl-sci"] },
+      { "paperId": "p3", "title": "Moisture-induced degradation pathways in hybrid perovskites", "authors": ["R. Patel", "L. Zhang"], "year": 2021, "source": "pubmed", "url": "https://pubmed.ncbi.nlm.nih.gov/00000001", "abstract": "通过原位表征揭示了湿度环境下钙钛矿分解的反应路径，并提出疏水封装方案。", "citationCount": 98, "quality_score": 81, "categories": [] },
+      { "paperId": "p4", "title": "Thermally stable hole-transport layers for perovskite modules", "authors": ["T. Sato", "K. Ito", "N. Yamamoto"], "year": 2024, "source": "arxiv", "url": "https://arxiv.org/abs/2403.00003", "abstract": "开发了一种高热稳定性的空穴传输层，使钙钛矿模组在 85°C 热老化下保持 90% 以上效率。", "citationCount": 46, "quality_score": 76, "categories": ["physics.app-ph"] },
+      { "paperId": "p5", "title": "Machine learning guided discovery of perovskite stabilizers", "authors": ["A. Smith", "B. Zhao", "C. Kumar"], "year": 2024, "source": "semantic_scholar", "url": "https://www.semanticscholar.org/paper/00000001", "abstract": "利用图神经网络从分子库中筛选稳定剂，实验验证命中分子显著延长器件寿命。", "citationCount": 88, "quality_score": 90, "categories": [] },
+      { "paperId": "p6", "title": "Light-induced phase segregation in mixed-halide perovskites", "authors": ["D. Garcia", "E. Muller"], "year": 2020, "source": "arxiv", "url": "https://arxiv.org/abs/2004.00004", "abstract": "研究了光照下混合卤素钙钛矿的相分离现象及其对开路电压的影响。", "citationCount": 174, "quality_score": 84, "categories": ["cond-mat.mtrl-sci"] },
+      { "paperId": "p7", "title": "Self-assembled monolayers as robust perovskite interfaces", "authors": ["F. Chen", "G. Wu"], "year": 2023, "source": "arxiv", "url": "https://arxiv.org/abs/2305.00005", "abstract": "自组装单分子层作为钙钛矿/电极界面，显著降低了界面复合与滞后。", "citationCount": 67, "quality_score": 79, "categories": ["cond-mat.mtrl-sci"] },
+      { "paperId": "p8", "title": "Degradation mechanisms of perovskite modules under damp heat", "authors": ["H. Rossi", "I. Bianchi"], "year": 2022, "source": "pubmed", "url": "https://pubmed.ncbi.nlm.nih.gov/00000002", "abstract": "在双 85 湿热条件下对模组进行 1000 小时老化，定位了主要失效模式。", "citationCount": 55, "quality_score": 72, "categories": [] },
+      { "paperId": "p9", "title": "Toward 25% efficient and stable perovskite-silicon tandems", "authors": ["J. Kim", "K. Lee", "S. Cho"], "year": 2025, "source": "arxiv", "url": "https://arxiv.org/abs/2501.00006", "abstract": "叠层器件通过界面与组分协同优化，实现效率与运行稳定性的双重突破。", "citationCount": 31, "quality_score": 82, "categories": ["physics.app-ph"] },
+      { "paperId": "p10", "title": "Accelerated lifetime testing protocols for perovskite photovoltaics", "authors": ["L. Martin", "O. Fischer"], "year": 2023, "source": "pubmed", "url": "https://pubmed.ncbi.nlm.nih.gov/00000003", "abstract": "提出了一套加速老化测试协议，用于标准化评估钙钛矿器件寿命。", "citationCount": 42, "quality_score": 70, "categories": [] },
+      { "paperId": "p11", "title": "Defect chemistry and ion migration control in wide-bandgap perovskites", "authors": ["M. Zhang", "N. Liu"], "year": 2021, "source": "semantic_scholar", "url": "https://www.semanticscholar.org/paper/00000002", "abstract": "结合第一性原理计算与实验，解析宽带隙钙钛矿的缺陷化学与离子迁移控制。", "citationCount": 91, "quality_score": 77, "categories": [] },
+      { "paperId": "p12", "title": "Scalable encapsulation strategies for perovskite solar modules", "authors": ["P. Singh", "Q. Huang"], "year": 2024, "source": "pubmed", "url": "https://pubmed.ncbi.nlm.nih.gov/00000004", "abstract": "对比多种封装结构与材料，提出可规模化的模组封装路线，显著改善湿热稳定性。", "citationCount": 24, "quality_score": 74, "categories": [] }
+    ]
+  },
+  "analysis": {
+    "total_analyzed": 12,
+    "high_quality_count": 10,
+    "quality_threshold": 40,
+    "statistics": {
+      "total_papers": 12,
+      "papers_with_abstract": 12,
+      "papers_with_citations": 12,
+      "total_citations": 1058,
+      "avg_citations": 88,
+      "year_range": { "min": 2020, "max": 2025 },
+      "avg_authors_per_paper": 4
+    },
+    "keywords": [
+      { "term": "perovskite", "frequency": 12, "tfidf_score": 0.31 },
+      { "term": "stability", "frequency": 10, "tfidf_score": 0.27 },
+      { "term": "passivation", "frequency": 7, "tfidf_score": 0.21 },
+      { "term": "ion migration", "frequency": 6, "tfidf_score": 0.19 },
+      { "term": "interface", "frequency": 8, "tfidf_score": 0.18 },
+      { "term": "degradation", "frequency": 6, "tfidf_score": 0.17 },
+      { "term": "encapsulation", "frequency": 4, "tfidf_score": 0.14 },
+      { "term": "damp heat", "frequency": 4, "tfidf_score": 0.13 },
+      { "term": "tandem", "frequency": 3, "tfidf_score": 0.11 },
+      { "term": "hole transport", "frequency": 3, "tfidf_score": 0.10 }
+    ],
+    "trends": {
+      "yearly_distribution": { "2020": 1, "2021": 2, "2022": 2, "2023": 3, "2024": 3, "2025": 1 },
+      "author_distribution": { "Y. Li": 3, "M. Kim": 3, "J. Chen": 2, "S. Park": 2, "A. Smith": 2 }
+    },
+    "key_findings": [
+      { "title": "Interface passivation for stable and efficient perovskite photovoltaics", "authors": ["M. Kim", "S. Park", "A. Nguyen"], "year": 2022, "abstract": "系统比较了多种表面钝化分子，发现基于烷基铵盐的界面钝化可将效率与稳定性同时提升。", "quality_score": 93, "citations": 210, "source": "arxiv" },
+      { "title": "Machine learning guided discovery of perovskite stabilizers", "authors": ["A. Smith", "B. Zhao", "C. Kumar"], "year": 2024, "abstract": "利用图神经网络从分子库中筛选稳定剂，实验验证命中分子显著延长器件寿命。", "quality_score": 90, "citations": 88, "source": "semantic_scholar" },
+      { "title": "Ion migration and its impact on perovskite solar cell stability", "authors": ["Y. Li", "H. Wang", "J. Chen"], "year": 2023, "abstract": "综述了钙钛矿中离子迁移的机理，并分析了其对器件长期稳定性的影响。", "quality_score": 88, "citations": 132, "source": "arxiv" }
+    ]
+  },
+  "knowledge_graph": {
+    "nodes": 12,
+    "edges": 18,
+    "statistics": { "avg_degree": 3.0, "density": 0.27 },
+    "clusters": [
+      { "cluster_id": 0, "size": 5, "nodes": ["p1", "p2", "p3", "p6", "p11"], "theme": "ion migration, interface" },
+      { "cluster_id": 1, "size": 4, "nodes": ["p4", "p8", "p10", "p12"], "theme": "encapsulation, damp heat" },
+      { "cluster_id": 2, "size": 3, "nodes": ["p5", "p7", "p9"], "theme": "stabilizer, tandem" }
+    ],
+    "key_nodes": [
+      { "node_id": "p2", "title": "Interface passivation for stable and efficient perovskite photovoltaics", "year": 2022, "importance_score": 0.87, "degree": 6, "citation_count": 210 },
+      { "node_id": "p1", "title": "Ion migration and its impact on perovskite solar cell stability", "year": 2023, "importance_score": 0.81, "degree": 5, "citation_count": 132 },
+      { "node_id": "p5", "title": "Machine learning guided discovery of perovskite stabilizers", "year": 2024, "importance_score": 0.74, "degree": 4, "citation_count": 88 }
+    ],
+    "evolution_paths": [
+      { "path": ["p6", "p1", "p2", "p9"], "theme": "相分离 → 离子迁移 → 界面钝化 → 叠层" },
+      { "path": ["p3", "p8", "p12"], "theme": "湿度降解 → 湿热失效 → 规模封装" }
+    ],
+    "graph_data": {
+      "nodes": [
+        { "id": "p1", "label": "Ion migration and its impact on perovskite solar cell stability", "year": 2023, "quality_score": 88, "citation_count": 132 },
+        { "id": "p2", "label": "Interface passivation for stable and efficient perovskite photovoltaics", "year": 2022, "quality_score": 93, "citation_count": 210 },
+        { "id": "p3", "label": "Moisture-induced degradation pathways in hybrid perovskites", "year": 2021, "quality_score": 81, "citation_count": 98 },
+        { "id": "p4", "label": "Thermally stable hole-transport layers for perovskite modules", "year": 2024, "quality_score": 76, "citation_count": 46 },
+        { "id": "p5", "label": "Machine learning guided discovery of perovskite stabilizers", "year": 2024, "quality_score": 90, "citation_count": 88 },
+        { "id": "p6", "label": "Light-induced phase segregation in mixed-halide perovskites", "year": 2020, "quality_score": 84, "citation_count": 174 },
+        { "id": "p7", "label": "Self-assembled monolayers as robust perovskite interfaces", "year": 2023, "quality_score": 79, "citation_count": 67 },
+        { "id": "p8", "label": "Degradation mechanisms of perovskite modules under damp heat", "year": 2022, "quality_score": 72, "citation_count": 55 },
+        { "id": "p9", "label": "Toward 25% efficient and stable perovskite-silicon tandems", "year": 2025, "quality_score": 82, "citation_count": 31 },
+        { "id": "p10", "label": "Accelerated lifetime testing protocols for perovskite photovoltaics", "year": 2023, "quality_score": 70, "citation_count": 42 },
+        { "id": "p11", "label": "Defect chemistry and ion migration control in wide-bandgap perovskites", "year": 2021, "quality_score": 77, "citation_count": 91 },
+        { "id": "p12", "label": "Scalable encapsulation strategies for perovskite solar modules", "year": 2024, "quality_score": 74, "citation_count": 24 }
+      ],
+      "edges": [
+        { "source": "p1", "target": "p2", "type": "similarity", "weight": 0.82 },
+        { "source": "p1", "target": "p11", "type": "citation", "weight": 1.0 },
+        { "source": "p2", "target": "p7", "type": "similarity", "weight": 0.76 },
+        { "source": "p2", "target": "p9", "type": "citation", "weight": 1.0 },
+        { "source": "p3", "target": "p8", "type": "similarity", "weight": 0.71 },
+        { "source": "p3", "target": "p12", "type": "citation", "weight": 1.0 },
+        { "source": "p4", "target": "p8", "type": "similarity", "weight": 0.68 },
+        { "source": "p4", "target": "p10", "type": "citation", "weight": 1.0 },
+        { "source": "p5", "target": "p2", "type": "similarity", "weight": 0.64 },
+        { "source": "p5", "target": "p9", "type": "citation", "weight": 1.0 },
+        { "source": "p6", "target": "p1", "type": "citation", "weight": 1.0 },
+        { "source": "p6", "target": "p11", "type": "similarity", "weight": 0.66 },
+        { "source": "p7", "target": "p9", "type": "similarity", "weight": 0.69 },
+        { "source": "p8", "target": "p12", "type": "citation", "weight": 1.0 },
+        { "source": "p8", "target": "p10", "type": "similarity", "weight": 0.73 },
+        { "source": "p10", "target": "p12", "type": "citation", "weight": 1.0 },
+        { "source": "p11", "target": "p1", "type": "similarity", "weight": 0.8 },
+        { "source": "p12", "target": "p4", "type": "similarity", "weight": 0.61 }
+      ]
+    }
+  },
+  "trl_assessment": {
+    "level": 4,
+    "confidence": 0.82,
+    "level_description": "实验室验证",
+    "evidence": [
+      { "title": "界面钝化策略已在实验室电池中稳定复现", "detail": "多组文献报告效率提升与衰减减缓" },
+      { "title": "湿热老化测试完成 1000 小时", "detail": "模组级失效模式已被定位" },
+      { "title": "稳定性标准化测试协议正在形成", "detail": "加速寿命测试方法仍待统一" }
+    ],
+    "distribution": { "1": 0.02, "2": 0.04, "3": 0.14, "4": 0.38, "5": 0.24, "6": 0.12, "7": 0.05, "8": 0.01, "9": 0.0 },
+    "trend": { "trend": "rising", "yearly_trl": { "2020": 2, "2022": 3, "2024": 4 } },
+    "scoring_details": { "keyword": 0.72, "experiment": 0.81, "citation": 0.88, "venue": 0.76, "temporal": 0.9 },
+    "assessment_method": "multi_factor_analysis",
+    "assessment_date": "2026-10-15T08:00:00"
+  },
+  "feasibility": {
+    "feasibility": "medium",
+    "recommendation": "建议聚焦界面钝化与封装两项高置信度方向，优先完成湿热老化与光照老化双通道验证，再推进模组级放大。",
+    "timeline": "24-36 个月",
+    "trl_level": 4,
+    "confidence": 0.82,
+    "risk_level": "medium",
+    "resource_estimate": { "funding": "150-300 万元", "team_size": "5-8 人", "duration": "24-36 个月" }
+  },
+  "innovations": {
+    "hypotheses": [
+      {
+        "id": "H1",
+        "title": "界面钝化与封装协同策略",
+        "description": "将烷基铵盐界面钝化与低水汽渗透封装结构联合优化，验证其在双 85 湿热条件下的协同增益。",
+        "rationale": "钝化与封装分别作用于本征稳定性与外部侵蚀，二者协同可能产生超线性寿命提升。",
+        "feasibility": { "technical": "high", "resource": "medium", "time": "medium" },
+        "expected_impact": "high",
+        "required_resources": { "funding": "100-200 万元", "team_size": "5 人", "equipment": ["手套箱", "湿热老化箱", "PL/TRPL"], "duration": "18 个月" },
+        "timeline": "18 个月",
+        "confidence": 0.86
+      },
+      {
+        "id": "H2",
+        "title": "机器学习加速稳定剂发现",
+        "description": "构建面向稳定剂分子的图神经网络筛选流程，优先探索高稳定性且低成本的候选分子。",
+        "rationale": "传统试错成本高，ML 可大幅压缩候选空间并复用文献中的结构-性能数据。",
+        "feasibility": { "technical": "medium", "resource": "medium", "time": "high" },
+        "expected_impact": "high",
+        "required_resources": { "funding": "80-150 万元", "team_size": "4 人", "equipment": ["GPU 服务器", "合成与测试平台"], "duration": "24 个月" },
+        "timeline": "24 个月",
+        "confidence": 0.74
+      },
+      {
+        "id": "H3",
+        "title": "宽禁带钙钛矿缺陷化学调控",
+        "description": "通过组分与掺杂调控宽禁带钙钛矿的缺陷浓度，抑制离子迁移并提升叠层器件稳定性。",
+        "rationale": "离子迁移是高温与光照老化的共同根源，缺陷化学调控是长期稳定性关键。",
+        "feasibility": { "technical": "medium", "resource": "medium", "time": "high" },
+        "expected_impact": "medium",
+        "required_resources": { "funding": "120-200 万元", "team_size": "5 人", "equipment": ["旋涂/蒸镀", "光电子能谱", "老化测试台"], "duration": "30 个月" },
+        "timeline": "30 个月",
+        "confidence": 0.68
+      }
+    ],
+    "counterfactual_reasoning": [
+      {
+        "hypothesis_id": "H1",
+        "scenarios": [
+          { "id": "CF1", "scenario": "采用不同技术路线", "condition_change": "使用更成熟的无机封装", "expected_outcome": "降低工艺风险，但可能增加制造成本", "success_probability": 0.78, "risks": ["成本上升", "光学损失"], "required_adjustments": ["重新设计模组边缘", "评估透光率"], "impact_on_timeline": "缩短 3 个月", "impact_on_resources": "增加 15% 成本" },
+          { "id": "CF2", "scenario": "改变资源投入水平", "condition_change": "扩大团队与测试设备", "expected_outcome": "加速多因子正交实验，更快锁定最优配方", "success_probability": 0.85, "risks": ["预算超支", "协调成本"], "required_adjustments": ["并行化测试", "建立数据管理"], "impact_on_timeline": "缩短 30% 时间", "impact_on_resources": "增加 40% 预算" },
+          { "id": "CF3", "scenario": "调整研究时间线", "condition_change": "先完成小面积验证再放大", "expected_outcome": "降低放大失败风险，但拉长总周期", "success_probability": 0.82, "risks": ["节奏偏慢", "先发优势减弱"], "required_adjustments": ["设定阶段里程碑", "提前对接产线"], "impact_on_timeline": "延长 6 个月", "impact_on_resources": "基本持平" }
+        ]
+      },
+      {
+        "hypothesis_id": "H2",
+        "scenarios": [
+          { "id": "CF1", "scenario": "数据稀缺", "condition_change": "仅使用文献数据训练", "expected_outcome": "模型泛化受限，命中率下降", "success_probability": 0.6, "risks": ["过拟合", "数据偏差"], "required_adjustments": ["引入主动学习", "补充高通量实验"], "impact_on_timeline": "延长 6 个月", "impact_on_resources": "增加实验预算" },
+          { "id": "CF2", "scenario": "计算与实验闭环", "condition_change": "建立高通量合成反馈", "expected_outcome": "迭代速度显著提升", "success_probability": 0.8, "risks": ["设备投入高"], "required_adjustments": ["自动化平台", "统一数据格式"], "impact_on_timeline": "缩短 40%", "impact_on_resources": "前期投入较高" }
+        ]
+      }
+    ],
+    "cross_domain_transfers": [
+      {
+        "source_domain": "人工智能",
+        "target_domain": "材料科学",
+        "transfer_method": "图神经网络分子筛选",
+        "expected_benefit": "将稳定剂候选空间缩小 90%，提升发现效率",
+        "implementation_steps": ["构建分子图与稳定性标签数据集", "训练 GNN 回归/分类模型", "对候选分子排序并实验验证前 20 名"]
+      },
+      {
+        "source_domain": "半导体封装",
+        "target_domain": "能源",
+        "transfer_method": "低水汽渗透封装工艺迁移",
+        "expected_benefit": "借鉴 OLED 与半导体封装经验，显著改善湿热稳定性",
+        "implementation_steps": ["评估多层阻隔膜方案", "设计钙钛矿模组封装结构", "湿热老化对比验证"]
+      }
+    ],
+    "total_suggestions": 5,
+    "high_confidence_count": 2,
+    "timestamp": "2026-10-15T08:00:00",
+    "llm_driven": true
+  },
+  "report": {
+    "format": "markdown",
+    "markdown_path": "demo/demo_report.md",
+    "html_path": null,
+    "generated_at": "2026-10-15T08:00:00",
+    "demo": true
+  }
+}

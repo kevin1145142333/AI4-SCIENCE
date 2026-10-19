@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI4 Science · 在线演示</title>
+  <meta name="description" content="AI4 Science 多智能体科研创新辅助系统">
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="css/base.css?v=20261016b">
+  <link rel="stylesheet" href="css/components.css?v=20261016b">
+  <link rel="stylesheet" href="css/effects.css?v=20261016b">
+  <link rel="stylesheet" href="css/views.css?v=20261016b">
+  <style>
+    .demo-ribbon {
+      padding: 8px 24px;
+      border-bottom: 1px solid rgba(112, 243, 255, 0.22);
+      background: rgba(7, 17, 28, 0.92);
+      color: #9ddde6;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+    .demo-ribbon b { color: #70f3ff; font-weight: 600; }
+    body.online-demo #offline-banner,
+    body.online-demo #btn-demo,
+    body.online-demo .nav-btn[data-route="cockpit"],
+    body.online-demo .nav-btn[data-route="tasks"],
+    body.online-demo .nav-btn[data-route="system"] { display: none; }
+  </style>
+</head>
+<body class="online-demo">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="grid-bg" aria-hidden="true"></div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="app-header">
+    <div class="brand">
+      <div class="brand-core" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-name">AI4 <span>SCIENCE</span></div>
+        <div class="brand-sub">科研创新 · 多智能体工作台</div>
+      </div>
+    </div>
+
+    <nav class="topnav" aria-label="主导航">
+      <button class="nav-btn" data-route="workbench" data-key="1"><span class="nav-k">1</span>结果工作台</button>
+      <button class="nav-btn" data-route="guide" data-key="2"><span class="nav-k">2</span>指南</button>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="btn-sound" title="音效（默认关闭）" aria-pressed="false">
+        <span class="icon">♪</span><span>音效</span>
+      </button>
+      <button class="icon-btn" id="btn-perf" title="性能模式（关闭粒子与扫光，低配设备更流畅）" aria-pressed="false">
+        <span class="icon">⚡</span><span>性能</span>
+      </button>
+      <button class="icon-btn cmd-trigger" title="命令面板" aria-label="打开命令面板">
+        <span class="icon">⌘</span><span>K</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="demo-ribbon">
+    <b>ONLINE DEMO</b> · 内置样例研究任务的只读展示 · 数据与计算均不连接本机
+  </div>
+
+  <div id="offline-banner" class="offline-banner" hidden>
+    <span class="dot"></span> 与服务断开连接，正在重试…
+  </div>
+
+  <main id="view" class="view" tabindex="-1"></main>
+
+  <footer class="app-footer">
+    <span>AI4 Science v<span id="footer-version">1.0.0</span></span>
+    <span class="muted">· Apache 2.0 · 在线演示使用预置样例数据</span>
+  </footer>
+
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+
+  <div id="command-palette" class="command-palette" hidden>
+    <div class="cmd-panel">
+      <div class="cmd-search">
+        <span class="cmd-prompt">›</span>
+        <input id="cmd-input" type="text" placeholder="输入命令或搜索…（Esc 关闭）" autocomplete="off">
+      </div>
+      <ul id="cmd-results" class="cmd-results"></ul>
+      <div class="cmd-hint">↑↓ 选择 · Enter 执行 · Esc 关闭</div>
+    </div>
+  </div>
+
+  <div id="modal-root"></div>
+
+  <script type="module" src="js/main.js?v=20261016b"></script>
+</body>
+</html>
